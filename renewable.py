@@ -20,6 +20,7 @@ c = [20.6, 42.9, 79.0, 0] #coal, gas, peaking, wind (renewable)
 e = [0.90, 0.35, 0.80, 0] #emissions rates
 F = [282.0, 136.0, 96.0, 100] #fixed cost per MW
 M = 10e6 #large number
+kappa = df.wind1/(max(df.wind1))
 
 # demand parameters
 b = 20.0 #slope
@@ -28,7 +29,7 @@ a = df.q_act + b*df.p_act #intercept
 # set up model
 m = Model("investment_example")
 m.setParam("OutputFlag", 1)
-m.setParam("Threads", 12)
+m.setParam("Threads", 2)
 
 #variables
 capacity = {}
@@ -65,19 +66,19 @@ m.setObjective(price[0]) #here you can write an objective function
 for t in range(T): #market clearing
     m.addConstr(quicksum(quantity[i,t] for i in range(I)) ==  a[t] - b*price[t], "MarketClearing%d" % (t))
 		
-for i in range(I): # foc
+for i in range(I-1): # foc
     for t in range(T):
         m.addConstr(price[t]-c[i]-shadow[i,t] <= 0, "FOC1%d" % (t))
         m.addConstr(quantity[i,t] <= M*u1[i,t], "FOC2%d" % (t))
         m.addConstr(price[t]-c[i]-shadow[i,t] >= -M*(1-u1[i,t]), "FOC3%d" % (t))
         
-for i in range(I): # shadow only if at capacity
+for i in range(I-1): # shadow only if at capacity
     for t in range(T):
         m.addConstr(quantity[i,t]-capacity[i] <= 0, "Shadow1%d" % (t))
         m.addConstr(shadow[i,t] <= M*u2[i,t], "Shadow2%d" % (t))
         m.addConstr(quantity[i,t]-capacity[i] >= -M*(1-u2[i,t]), "Shadow3%d" % (t))
         
-for i in range(I): # zero profit
+for i in range(I-1): # zero profit
     m.addConstr(quicksum(df.weight[t]*shadow[i,t] for t in range(T)) - F[i] <= 0, "Invest1%d" % (t))
     m.addConstr(capacity[i] <= M*u3[i], "Invest2%d" % (t))
     m.addConstr(quicksum(df.weight[t]*shadow[i,t] for t in range(T)) - F[i] >= -M*(1-u3[i]), "Invest3%d" % (t))    
