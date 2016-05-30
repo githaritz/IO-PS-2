@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.3)  30 MAY 2016 13:13
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.3)  30 MAY 2016 13:28
 entering extended mode
 **ps2.tex
 ("C:\Users\Haritz\Desktop\Haritz Git\IO PS2\Report\ps2.tex"
@@ -613,22 +613,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--60
 
 [2] [3] ("C:\Users\Haritz\Desktop\Haritz Git\IO PS2\Report\ps2.aux") ) 
 Here is how much of TeX's memory you used:
- 11492 strings out of 494045
- 213395 string characters out of 3145967
+ 11497 strings out of 494045
+ 213426 string characters out of 3145967
  257943 words of memory out of 3000000
  14522 multiletter control sequences out of 15000+200000
- 32565 words of font info for 66 fonts, out of 3000000 for 9000
+ 34782 words of font info for 71 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  63i,6n,57p,687b,196s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/urw/palatino/uplri8a.pfb>
-Output written on ps2.pdf (3 pages, 55516 bytes).
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/urw/palatino/uplri8a.pfb>
+Output written on ps2.pdf (3 pages, 64094 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 36 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
