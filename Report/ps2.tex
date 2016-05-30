@@ -1,0 +1,67 @@
+\documentclass[12 pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[sc]{mathpazo}
+\linespread{1.05} % Palatino needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{bbm}
+
+
+\title{IO Problem Set 2}
+
+\author{Haritz Garro and Nil Karacaoglu}
+
+
+\begin{document}
+\maketitle
+
+The original code, which does not include wind, has the following solution \\
+\\
+\textbf{Investment in Coal:} 11327 \\
+\textbf{Investment in Gas:}  5478  \\
+\textbf{Investment in Peak:} 2246
+
+
+\section*{Exercise 1}
+
+In this exercise we endogenously introduce wind. The benefits of wind in this context are that it has zero marginal cost, as well as a low fixed cost. On top of this, it is a technology that has zero emissions, although we are not taking into consideration this last point explicitly in our analysis in this first exercise. The main drawback of this technology comes from the fact that once capacity is set, the amount of energy that we are able to get is conditioned by the weather. 
+
+In order to get the quantity of wind, we subtract the wind1 vector from the q.act vector. To obtain the relative capacity of wind in each period, we divide this quantity vector by the maximum quantity of wind. This vector will give us fraction of wind that we will have available out of the total capacity built for wind. 
+
+The results on investment that we get in this section are \\
+\\
+\textbf{Investment in Coal:} 0 \\
+\textbf{Investment in Gas:}  8669  \\
+\textbf{Investment in Peak:} 5105 \\
+\textbf{Investment in Wind:} 27566 \\
+\\
+
+To better understand the shift in the mix of electricity that arises after the introduction of wind, we need to understand the properties of coal. Coal is a technology characterized by its very high fixed cost, but low marginal cost. Thus, it is a technology that has to be heavily used so as to justify the investment. In the first scenario such an investment was justified, and we did so with a strong determination. Once we can make use of wind, however, it no longer makes sense to invest in coal at all, since we are able to cover a big chunk of our energy demands by the use of wind.
+
+As for the technical details of the code, the shadow values corresponding to wind have to be weighted by the relative capacity of wind in that period. 
+
+\section*{Exercise 2}
+
+For this second exercise, we introduce a subsidy for wind. We are very concerned about the environment, and we believe that fiscally benefitting renewable energies is a good decision that will not only benefit the environment in the short run, but also possibly make investment in renewable energy more solid and more sustainable in the long run.
+
+We introduce the subsidy in our system of constraints simply by multiplying the price of wind in those constraints by a term $(1+s)$, where s is set at 10 percent. The reason why we chose a proportional subsidy, rather than a flat quantity, is that the latter might have created problems in cases wqhere the actual equilibrium price was equal to zero. Ideally, we would like to try with different values of the proportional subsidy rate. However, the computational burden of the exercise is non-negligible, since it takes an hour for the machine to spit the answer. 
+
+The results for investment that we got for this section were the following \\
+\\
+\textbf{Investment in Coal:} 0 \\
+\textbf{Investment in Gas:}  8039  \\
+\textbf{Investment in Peak:} 5383 \\
+\textbf{Investment in Wind:} 29653 \\
+\\
+
+A raw comparison to the results obtained in Exercise 1 allows us to assess the effects of the 10 percent subsidy for wind. As expected, coal remains to be unused. As for wind, as a consequence of it becoming effectively cheaper, its investment increases, though the increase is slightly less than 10 percent. As far as gas is concerned, its investment drops a bit more than 5 percent. The increase in wind investment allows for a lower utilization of gas, which has a high fixed cost. Finally, as far as peak goes, investment actually increases, though modestly, probably motivated by the lower fixed cost than gas and as a consequence of the drop in investment in the former.
+
+\section*{Exercise 3}
+
+
+
+\end{document}
