@@ -25,6 +25,8 @@ The original code, which does not include wind, has the following solution \\
 \textbf{Investment in Gas:}  5478  \\
 \textbf{Investment in Peak:} 2246
 
+In the exercises below, we did not introduce convexity into the fixed costs. That is why, sometimes, we will obtain corner solutions, where investment in one or more technologies will drop to zero. Given that we were able to get results, and those results were reasonable from an economic point of view, we decided not to experiment with the fixed costs.
+
 
 \section*{Exercise 1}
 
@@ -62,8 +64,17 @@ A raw comparison to the results obtained in Exercise 1 allows us to assess the e
 
 \section*{Exercise 3}
 
-For this section, we are asked to tax dirty technologies. Something that it is not clear from the instructions is whether we should keep the wind subsidy in place for this exercise, or not. We decided to remove the subsidy, and focus on investigating the role of the carbon taxes in isolation. To this purpose, we  multiply prices by a term $(1-te_i)$, where we set t to 30 percent, and where $e_i$ denotes the emissions rate of technology i.
+For this section, we are asked to tax dirty technologies. Something that it is not clear from the instructions is whether we should keep the wind subsidy in place for this exercise, or not. We decided to remove the subsidy, and focus on investigating the role of the carbon taxes in isolation. To this purpose, we  multiply prices by a term $(1-te_i)$, where we set t to 25 percent, and where $e_i$ denotes the emissions rate of technology i.	These are the results that we obtain\\
+\\
+\textbf{Investment in Coal:} 0 \\
+\textbf{Investment in Gas:}  12219  \\
+\textbf{Investment in Peak:} 0 \\
+\textbf{Investment in Wind:} 29317 \\
+\\
 
+This is consistent with what we would expect, simply because gas is the technology that, by far, has a lower rate of emmisions out of the dirty technologies. Therefore, effectively we are taxing gas less. The high taxation of both coal and peak lead to zero investment in those technologies, whereas investment in gas increases substantially. On top of this, investment in wind also increases, as wind is the only technology not being taxed. Finally, the reason why gas investment increases much more than investment in wind after taxing non-wind technologies is explained by the fact that more gas is needed to substitute for coal and peak, because the substitutability that wind offers is imperfect, as we rely on exogenous weather conditions to get energy out of our pre-installed capacity. In this sense, gas plays a bit of a buffer role.
+
+\section*{Exercise 4}
 
 
 \end{document}
